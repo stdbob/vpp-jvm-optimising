@@ -1,8 +1,9 @@
 package com.vpp.ch07;
 
-public class Customer {
+public class Customer implements CustomerReadOnly {
 	private String name;
 
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -15,6 +16,7 @@ public class Customer {
 		this.name = name;
 	}
 	
+	@Override
 	public String toString() {
 		return name;
 	}
