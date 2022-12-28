@@ -18,4 +18,7 @@ public class CustomerRecords {
 	public Map<String, Customer> getCustomers() {
 		return Map.copyOf(this.records);//Collections.unmodifiableMap(this.records);//allocating new map and memory usage increase
 	}
+	public Customer find(String name) {
+		return records.get(name);
+	}
 }
