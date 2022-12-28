@@ -16,6 +16,6 @@ public class CustomerRecords {
 	}
 		
 	public Map<String, Customer> getCustomers() {
-		return new HashMap<>(this.records);//allocating new map and memory usage increase
+		return Map.copyOf(this.records);//Collections.unmodifiableMap(this.records);//allocating new map and memory usage increase
 	}
 }
