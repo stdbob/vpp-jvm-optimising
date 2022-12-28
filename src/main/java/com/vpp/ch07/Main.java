@@ -1,20 +1,21 @@
 package com.vpp.ch07;
 
-import java.util.Iterator;
+import com.vpp.ch07.customers.CustomerReadOnly;
+import com.vpp.ch07.customers.CustomerRecords;
 
 public class Main {
 
 	public static void main(String[] args) {
 		CustomerRecords records = new CustomerRecords();
 
-		records.addCustomer(new Customer("John"));
-		records.addCustomer(new Customer("Simon"));
+		records.addCustomer("John");
+		records.addCustomer("Simon");
 
 		//records.getCustomers().clear();
 		//records.find("John").setName("Jane");
-		records.getCustomers().get("Simon").setName("Simona");
+		//records.getCustomers().get("Simon").setName("Simona");
 
-		for (Customer next : records.getCustomers().values()) {
+		for (CustomerReadOnly next : records.getCustomers().values()) {
 			System.out.println(next);
 		}
 	}

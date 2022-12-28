@@ -1,6 +1,7 @@
-package com.vpp.ch07;
+package com.vpp.ch07.customers;
 
-public class Customer implements CustomerReadOnly {
+
+class Customer implements CustomerReadOnly {
 	private String name;
 
 	@Override
@@ -8,7 +9,7 @@ public class Customer implements CustomerReadOnly {
 		return name;
 	}
 
-	public void setName(String name) {
+	void setName(String name) {
 		this.name = name;
 	}
 

@@ -1,7 +1,6 @@
-package com.vpp.ch07;
-import java.util.Collections;
+package com.vpp.ch07.customers;
+
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 public class CustomerRecords {
@@ -13,6 +12,10 @@ public class CustomerRecords {
 	
 	public void addCustomer(Customer c) {
 		this.records.put(c.getName(), c);
+	}
+
+	public void addCustomer(String name) {
+		addCustomer(new Customer(name));
 	}
 		
 	public Map<String, Customer> getCustomers() {

@@ -1,4 +1,4 @@
-package com.vpp.ch07;
+package com.vpp.ch07.customers;
 
 public interface CustomerReadOnly {
   String getName();
