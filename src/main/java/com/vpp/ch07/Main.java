@@ -10,12 +10,10 @@ public class Main {
 		records.addCustomer(new Customer("John"));
 		records.addCustomer(new Customer("Simon"));
 
-		//records.getCustomers().clear();
+		records.getCustomers().clear();
 
-//		for (Customer next : records.getCustomers().values())
-		for (Iterator<Customer> it = records.getCustomers();it.hasNext();) {
-			System.out.println(it.next());
-			//it.remove();
+		for (Customer next : records.getCustomers().values()) {
+			System.out.println(next);
 		}
 	}
 	

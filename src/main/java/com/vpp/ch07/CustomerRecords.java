@@ -1,4 +1,5 @@
 package com.vpp.ch07;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -14,11 +15,7 @@ public class CustomerRecords {
 		this.records.put(c.getName(), c);
 	}
 		
-//	public Map<String, Customer> getCustomers() {
-//		return this.records;
-//	}
-
-	public Iterator<Customer> getCustomers() {
-		return this.records.values().iterator();
+	public Map<String, Customer> getCustomers() {
+		return new HashMap<>(this.records);//allocating new map and memory usage increase
 	}
 }
