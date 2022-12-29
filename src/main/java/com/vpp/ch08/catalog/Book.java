@@ -30,7 +30,7 @@ public class Book {
 	}
 	
 	public Price getPrice() {
-		return this.price;
+		return new Price(this.price.getValue());
 	}
 	
 	void setPrice(Double price) {
