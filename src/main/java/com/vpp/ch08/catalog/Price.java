@@ -26,8 +26,7 @@ public class Price {
 		}
 		else {
 			Double conversion = rates.get("USD") * rates.get(toCurrency);
-			value = conversion * value;
-			return BigDecimal.valueOf(value).round(new MathContext(4, RoundingMode.HALF_UP)).doubleValue();
+			return conversion * value;
 		}
 	}
 	
