@@ -33,7 +33,7 @@ public class Book {
 		return this.price;
 	}
 	
-	public void setPrice(Double price) {
+	void setPrice(Double price) {
 		this.price = new Price(price);
 	}
 	
