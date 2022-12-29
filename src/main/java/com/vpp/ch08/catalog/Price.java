@@ -35,5 +35,9 @@ public class Price {
 	public Map<String,Double> getRates() {
 		return rates;
 	}
+
+	public Double getValue() {
+		return value;
+	}
 	
 }

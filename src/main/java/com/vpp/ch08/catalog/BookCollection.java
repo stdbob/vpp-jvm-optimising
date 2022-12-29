@@ -23,7 +23,7 @@ public class BookCollection {
 	public Book findBookByName(String title) {
 		for (Book book : books) {
 			if (book.getTitle().equals(title)) {
-				return book;
+				return new Book(book.getId(), book.getTitle(), book.getAuthor(), book.getPrice().getValue());
 			}
 		}
 		return null;
