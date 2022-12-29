@@ -1,5 +1,8 @@
 package com.vpp.ch08.catalog;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,7 +27,7 @@ public class Price {
 		else {
 			Double conversion = rates.get("USD") * rates.get(toCurrency);
 			value = conversion * value;
-			return value;
+			return BigDecimal.valueOf(value).round(new MathContext(4, RoundingMode.HALF_UP)).doubleValue();
 		}
 	}
 	
